@@ -10,6 +10,26 @@ if (localStorage.getItem("nine") === null) {
 } else {
     $("#nine-text").text(JSON.parse(window.localStorage.getItem("nine")));
 };
+if (localStorage.getItem("ten") === null) {
+    $("#ten-text").text("There are no current tasks.");
+} else {
+    $("#ten-text").text(JSON.parse(window.localStorage.getItem("ten")));
+};
+if (localStorage.getItem("eleven") === null) {
+    $("#eleven-text").text("There are no current tasks.");
+} else {
+    $("#eleven-text").text(JSON.parse(window.localStorage.getItem("eleven")));
+};
+if (localStorage.getItem("twelve") === null) {
+    $("#twelve-text").text("There are no current tasks.");
+} else {
+    $("#twelve-text").text(JSON.parse(window.localStorage.getItem("twelve")));
+};
+if (localStorage.getItem("one") === null) {
+    $("#one-text").text("There are no current tasks.");
+} else {
+    $("#one-text").text(JSON.parse(window.localStorage.getItem("one")));
+};
 
 // EDIT TASK WHEN CLICKED
 $(".list-group").on("click", "p", function () {
