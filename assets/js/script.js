@@ -4,6 +4,13 @@ var currentDate = moment().format("dddd, MMMM Do YYYY");
 // add date to p element
 var showDate = $("#currentDay").text(currentDate);
 
+// LOAD TASKS
+if (localStorage.getItem("nine") === null) {
+    $("#nine-text").text("There are no current tasks.");
+} else {
+    $("#nine-text").text(JSON.parse(window.localStorage.getItem("nine")));
+};
+
 // EDIT TASK WHEN CLICKED
 $(".list-group").on("click", "p", function () {
     // create variable for text
