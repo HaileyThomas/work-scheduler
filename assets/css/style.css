@@ -72,4 +72,11 @@ textarea{
 
 .icon {
   color: #ffffff;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.icon:hover {
+  color: #000000;
 }
