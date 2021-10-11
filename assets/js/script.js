@@ -46,6 +46,8 @@ $(".list-group").on("click", "p", function () {
     $(this).replaceWith(textInput);
     // create text area focus
     textInput.trigger("focus");
+    // exit out of form on blur
+    
     // click save task icon
     $(".list-group").on("click", "span", function () {
         // get the textarea's current value/text
