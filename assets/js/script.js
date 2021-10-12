@@ -1,5 +1,15 @@
 // VARIABLES
-var taskArray = [];
+var taskArray = [
+    "There are no current tasks for 9 am.",
+    "There are no current tasks for 10 am.",
+    "There are no current tasks for 11 am.",
+    "There are no current tasks for 12 pm.",
+    "There are no current tasks for 1 pm.",
+    "There are no current tasks for 2 pm.",
+    "There are no current tasks for 3 pm.",
+    "There are no current tasks for 4 pm.",
+    "There are no current tasks for 5 pm."
+];
 var nineEl = taskArray[0];
 var tenEl = taskArray[1];
 var elevenEl = taskArray[2];
@@ -14,6 +24,10 @@ var fiveEl = taskArray[8];
 var currentDate = moment().format("dddd, MMMM Do YYYY");
 // add date to p element
 var showDate = $("#currentDay").text(currentDate);
+
+// TIME
+var currentTime = moment().hour();
+console.log(currentTime);
 
 // LOAD TASKS
 
@@ -51,7 +65,10 @@ $(".list-group").on("click", "p", function () {
         var editedTask = text;
         // replace text input with new p element
         $(textInput).replaceWith(taskP);
+        taskArray.splice(index, 1, editedTask);
+        console.log(taskArray);
+        return;
         // add to array
-        taskArray.push(editedTask);
+        //taskArray.push(editedTask);
     });
 });
