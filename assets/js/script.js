@@ -152,7 +152,7 @@ $(".list-group").on("click", "p", function () {
         $(textInput).replaceWith(taskP);
         taskArray.splice(index, 1, editedTask);
         console.log(taskArray);
-        return;
+        localStorage.setItem("array", taskArray);
         // add to array
         //taskArray.push(editedTask);
     });
