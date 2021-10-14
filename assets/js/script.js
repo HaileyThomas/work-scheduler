@@ -10,16 +10,17 @@ var taskArray = [
     "There are no current tasks for 4 pm.",
     "There are no current tasks for 5 pm."
 ];
-var nineEl = taskArray[0];
-var tenEl = taskArray[1];
-var elevenEl = taskArray[2];
-var twelveEl = taskArray[3];
-var oneEl = taskArray[4];
-var twoEl = taskArray[5];
-var threeEl = taskArray[6];
-var fourEl = taskArray[7];
-var fiveEl = taskArray[8];
 
+var currentArray = localStorage.getItem("array");
+var nineEl = currentArray[0];
+var tenEl = currentArray[1];
+var elevenEl = currentArray[2];
+var twelveEl = currentArray[3];
+var oneEl = currentArray[4];
+var twoEl = currentArray[5];
+var threeEl = currentArray[6];
+var fourEl = currentArray[7];
+var fiveEl = currentArray[8];
 console.log(nineEl);
 
 // DISPLAY CURRENT DATE
@@ -152,7 +153,7 @@ $(".list-group").on("click", "p", function () {
         $(textInput).replaceWith(taskP);
         taskArray.splice(index, 1, editedTask);
         console.log(taskArray);
-        localStorage.setItem("array", taskArray);
+        localStorage.setItem("array", (taskArray));
         // add to array
         //taskArray.push(editedTask);
     });
