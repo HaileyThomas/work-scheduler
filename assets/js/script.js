@@ -42,8 +42,7 @@ if (currentTime.isBetween(eightAm, tenAm)) {
     $("#three").addClass("bg-success");
     $("#four").addClass("bg-success");
     $("#five").addClass("bg-success");
-};
-if (currentTime.isBetween(nineAm, elevenAm)) {
+} else if (currentTime.isBetween(nineAm, elevenAm)) {
     $("#ten").addClass("bg-danger");
     $("#eleven").addClass("bg-success");
     $("#twelve").addClass("bg-success");
@@ -52,8 +51,7 @@ if (currentTime.isBetween(nineAm, elevenAm)) {
     $("#three").addClass("bg-success");
     $("#four").addClass("bg-success");
     $("#five").addClass("bg-success");
-};
-if (currentTime.isBetween(tenAm, twelvePm)) {
+} else if (currentTime.isBetween(tenAm, twelvePm)) {
     $("#eleven").addClass("bg-danger");
     $("#twelve").addClass("bg-success");
     $("#one").addClass("bg-success");
@@ -61,39 +59,33 @@ if (currentTime.isBetween(tenAm, twelvePm)) {
     $("#three").addClass("bg-success");
     $("#four").addClass("bg-success");
     $("#five").addClass("bg-success");
-};
-if (currentTime.isBetween(elevenAm, onePm)) {
+} else if (currentTime.isBetween(elevenAm, onePm)) {
     $("#twelve").addClass("bg-danger");
     $("#one").addClass("bg-success");
     $("#two").addClass("bg-success");
     $("#three").addClass("bg-success");
     $("#four").addClass("bg-success");
     $("#five").addClass("bg-success");
-};
-if (currentTime.isBetween(twelvePm, twoPm)) {
+} else if (currentTime.isBetween(twelvePm, twoPm)) {
     $("#one").addClass("bg-danger");
     $("#two").addClass("bg-success");
     $("#three").addClass("bg-success");
     $("#four").addClass("bg-success");
     $("#five").addClass("bg-success");
-};
-if (currentTime.isBetween(onePm, threePm)) {
+} else if (currentTime.isBetween(onePm, threePm)) {
     $("#two").addClass("bg-danger");
     $("#three").addClass("bg-success");
     $("#four").addClass("bg-success");
     $("#five").addClass("bg-success");
-};
-if (currentTime.isBetween(twoPm, fourPm)) {
+} else if (currentTime.isBetween(twoPm, fourPm)) {
     $("#three").addClass("bg-danger");
     $("#four").addClass("bg-success");
     $("#five").addClass("bg-success");
-}
-if (currentTime.isBetween(threePm, fivePm)) {
+} else if (currentTime.isBetween(threePm, fivePm)) {
     $("#four").addClass("bg-danger");
     $("#five").addClass("bg-success");
-};
-if (currentTime.isBetween(fourPm, sixPm)) {
-    $("#five").addClass("bg-success");
+} else if (currentTime.isBetween(fourPm, sixPm)) {
+    $("#five").addClass("bg-danger");
 };
 
 
