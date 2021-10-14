@@ -1,27 +1,18 @@
 // VARIABLES
-var taskArray = [
-    "There are no current tasks for 9 am.",
-    "There are no current tasks for 10 am.",
-    "There are no current tasks for 11 am.",
-    "There are no current tasks for 12 pm.",
-    "There are no current tasks for 1 pm.",
-    "There are no current tasks for 2 pm.",
-    "There are no current tasks for 3 pm.",
-    "There are no current tasks for 4 pm.",
-    "There are no current tasks for 5 pm."
-];
+var taskArray = [];
 
 var currentArray = localStorage.getItem("array");
-var nineEl = currentArray[0];
-var tenEl = currentArray[1];
-var elevenEl = currentArray[2];
-var twelveEl = currentArray[3];
-var oneEl = currentArray[4];
-var twoEl = currentArray[5];
-var threeEl = currentArray[6];
-var fourEl = currentArray[7];
-var fiveEl = currentArray[8];
-console.log(nineEl);
+var nineEl = taskArray[0];
+var tenEl = taskArray[1];
+var elevenEl = taskArray[2];
+var twelveEl = taskArray[3];
+var oneEl = taskArray[4];
+var twoEl = taskArray[5];
+var threeEl = taskArray[6];
+var fourEl = taskArray[7];
+var fiveEl = taskArray[8];
+console.log("nineEl: " + nineEl);
+console.log("currentArray: " + currentArray);
 
 // DISPLAY CURRENT DATE
 var currentDate = moment().format("dddd, MMMM Do YYYY");
@@ -144,7 +135,7 @@ $(".list-group").on("click", "p", function () {
         var index = $(textInput)
             .closest(".list-group-item")
             .index();
-        console.log(index);
+        console.log("index number: " + index);
         // create new p element with new text
         var taskP = $("<p>").text(text);
         // send text to editedTask
@@ -152,9 +143,7 @@ $(".list-group").on("click", "p", function () {
         // replace text input with new p element
         $(textInput).replaceWith(taskP);
         taskArray.splice(index, 1, editedTask);
-        console.log(taskArray);
+        console.log("task array: " + taskArray);
         localStorage.setItem("array", (taskArray));
-        // add to array
-        //taskArray.push(editedTask);
     });
 });
