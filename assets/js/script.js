@@ -130,4 +130,7 @@ var saveTask = function () {
     if (taskP.parent("#nine")) {
         localStorage.setItem("nine", JSON.stringify(editedTask));
     };
+    if (taskP.parent("#ten")) {
+        localStorage.setItem("ten", JSON.stringify(editedTask));
+    };
 }
