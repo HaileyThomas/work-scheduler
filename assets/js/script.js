@@ -1,4 +1,5 @@
-
+var editedTask;
+var taskP;
 
 // DISPLAY CURRENT DATE
 var currentDate = moment().format("dddd, MMMM Do YYYY");
@@ -74,6 +75,17 @@ if (currentTime.isBetween(eightAm, tenAm)) {
     $("#five").addClass("bg-danger");
 };
 
+// LOAD TASKS FUNCTION
+var loadTasks = function () {
+    if ("nine" in localStorage) {
+        $("#nine-text").text(localStorage.getItem("nine"));
+    } else {
+        $("#nine-text").text("There are currently no tasks.");
+    };
+};
+
+// CALL LOAD TASKS FUNCTION
+loadTasks();
 
 // EDIT TASK WHEN CLICKED
 $(".list-group").on("click", "p", function () {
@@ -102,8 +114,20 @@ $(".list-group").on("click", "p", function () {
             .index();
         console.log("index number: " + index);
         // create new p element with new text
-        var taskP = $("<p>").text(text);
+        taskP = $("<p>").text(text);
         // replace text input with new p element
         $(textInput).replaceWith(taskP);
+        console.log("taskP: " + taskP);
+        console.log("text: " + text);
+        editedTask = text;
+        console.log("editedTask: " + editedTask);
+        saveTask();
     });
 });
+
+// SAVE TASKS FUNCTION
+var saveTask = function () {
+    if (taskP.parent("#nine")) {
+        localStorage.setItem("nine", JSON.stringify(editedTask));
+    };
+}
