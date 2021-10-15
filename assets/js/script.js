@@ -1,18 +1,4 @@
-// VARIABLES
-var taskArray = [];
 
-var currentArray = localStorage.getItem("array");
-var nineEl = taskArray[0];
-var tenEl = taskArray[1];
-var elevenEl = taskArray[2];
-var twelveEl = taskArray[3];
-var oneEl = taskArray[4];
-var twoEl = taskArray[5];
-var threeEl = taskArray[6];
-var fourEl = taskArray[7];
-var fiveEl = taskArray[8];
-console.log("nineEl: " + nineEl);
-console.log("currentArray: " + currentArray);
 
 // DISPLAY CURRENT DATE
 var currentDate = moment().format("dddd, MMMM Do YYYY");
@@ -89,18 +75,6 @@ if (currentTime.isBetween(eightAm, tenAm)) {
 };
 
 
-// LOAD TASKS
-$("#nine-text").text(nineEl);
-$("#ten-text").text(tenEl);
-$("#eleven-text").text(elevenEl);
-$("#twelve-text").text(twelveEl);
-$("#one-text").text(oneEl);
-$("#two-text").text(twoEl);
-$("#three-text").text(threeEl);
-$("#four-text").text(fourEl);
-$("#five-text").text(fiveEl);
-
-
 // EDIT TASK WHEN CLICKED
 $(".list-group").on("click", "p", function () {
     // create variable for text
@@ -117,7 +91,6 @@ $(".list-group").on("click", "p", function () {
     // create text area focus
     textInput.trigger("focus");
     // exit out of form on blur
-
     // click save task icon
     $(".list-group").on("click", "span", function () {
         // get the textarea's current value/text
@@ -130,12 +103,7 @@ $(".list-group").on("click", "p", function () {
         console.log("index number: " + index);
         // create new p element with new text
         var taskP = $("<p>").text(text);
-        // send text to editedTask
-        var editedTask = text;
         // replace text input with new p element
         $(textInput).replaceWith(taskP);
-        taskArray.splice(index, 1, editedTask);
-        console.log("task array: " + taskArray);
-        localStorage.setItem("array", (taskArray));
     });
 });
