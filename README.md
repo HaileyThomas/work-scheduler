@@ -9,11 +9,11 @@
 - [License](#license)
 ## Usage
 View webpage and enter in work tasks according the hour.
-### Links
-[Link](https://haileythomas.github.io/work-scheduler/) link to view webpage
-[GitHub](https://github.com/HaileyThomas/work-scheduler) link to GitHub
 ### Screenshot
 ![alt text](./assets/images/screenshot.png)
+### Links
+- [Link](https://haileythomas.github.io/work-scheduler/) link to view webpage
+- [GitHub](https://github.com/HaileyThomas/work-scheduler) link to GitHub
 ## Credits
 ASU Coding Boot Camp for the starter code.
 ## License
